@@ -1,0 +1,724 @@
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	color: #6c7279;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0px;
+}
+
+p {
+	margin: 0 0 10px;
+}
+
+/*=========CONTAINER=========*/
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/*=========HEADER=========*/
+
+.header {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 0;
+	border-bottom: 1px solid #515369;
+}
+
+.header.fixed {
+	height: auto;
+
+	position: fixed;
+
+	background-color: #31344e;
+	/* transition: background-color 0.5s linear */
+}
+.header.fixed .header-inner {
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	border-bottom: 0;
+}
+
+/*=========NAVIGATION=========*/
+
+.nav {
+	display: flex;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.nav-link {
+	margin-left: 50px;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.75;
+	transition: opacity 0.2s linear;
+}
+.nav-link:hover {
+	opacity: 1;
+}
+.nav-link:first-child {
+	margin-left: 0px;
+}
+
+/*=========INTRO=========*/
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	height: 750px;
+	padding-top: 100px;
+	background: #31344e url("../images/intro-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.intro-inner {
+	width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro-title {
+	margin: 0 0 30px 0;
+	font-family: 'Open Sans' sans-serif;
+	font-size: 65px;
+	line-height: 1.1;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.intro-subtitle  {
+	margin-bottom: 60px;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #fff;
+}
+
+/*=========BTN=========*/
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 14px 40px;
+	font-size: 13px;
+	font-weight: 600;
+	font-family: inherit;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.btn--red {
+	background-color: #e84545;
+}
+.btn--red:hover {
+	background-color: #fff;;
+	color: #e84545;
+	transition: background 0.3s linear;
+}
+
+.btn--long {
+	min-width: 280px;
+}
+.btn--long:hover {
+	padding: 13px 39px;
+	border: 1px solid #e84545;
+	transition: background 0.3s linear
+}
+
+/*=========FEATURES=========*/
+
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 95px 0;
+}
+
+.features-item {
+	padding: 0 40px;
+	margin: 25px 0;
+	width: 33.33333%;
+	text-align: center;
+}
+
+.features-icon {
+	margin-bottom: 25px;
+}
+
+.features-title {
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2d3033;
+}
+
+.features-text {
+	font-size: 14px;
+	line-height: 1.5;
+	color: #6c7279;
+}
+
+/*=========WORKS=========*/
+
+.works {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.works-item {
+	width: 25%;
+	height: 350px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	position: relative;
+	overflow: hidden;
+}
+.works-item:hover .works-contant {
+	opacity: 1;
+ }
+
+.works-img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	min-width: 100%;
+
+	transform: translate3d(-50%,-50%, 0);
+}
+
+ .works-contant {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 2;
+	 background-color: rgba(232, 69, 69, 0.9);
+	 opacity: 0;
+	 transition: opacity 0.2s linear;
+ }
+ 
+ .works-title {
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+}
+.works-text {
+	font-size: 14px;
+	color: #fff;
+}
+
+/*=========WORKS=========*/
+
+.team {
+	margin: 100px 0 70px;
+}
+.team-inner {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+.team-item {
+	width: 25%;
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+
+.team-img {
+	display: block;
+	margin-bottom: 20px;
+	max-width: 100%;
+	height: auto;
+}
+
+.team-name {
+	margin-bottom: 8px;
+	font-size: 22px;
+	color: #2d3033;
+}
+
+.team-prof {
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #e84545;
+}
+
+.team-text {
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #6c7279;
+}
+
+/*=========SOCIAL=========*/
+
+.social {
+	display: flex;
+}
+
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 4px;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border: 1px solid #e8ecee;
+	transition: background 0.2s linear;
+}
+.social-link:hover {
+	background-color: #e8eceeee;
+}
+.social-link:hover .social-icon{
+	fill: #e84545;
+}
+
+.social-icon {
+	display: block;
+	height: 18px;
+	fill: #c6cacc;
+	transition: fill 0.2s linear;
+}
+
+.social-footer {
+	justify-content: center;
+	margin-left: 5px;
+}
+.social-footer .social-link {
+	background-color: transparent;
+	border-width: 2px;
+	border-color: #fff;
+	border-radius: 2px;
+}
+.social-footer .social-link:hover {
+	background-color: #fff;
+}
+.social-footer .social-icon {
+	fill: #fff;
+}
+
+/*=========REVIEWS=========*/
+
+.reviews {
+	overflow: hidden;
+	background-color: #53354a;
+}
+
+.reviews-item {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.reviews-photo {
+	position: relative;
+	width: 50%;
+	height: 500px;
+}
+
+.reviews-img {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+}
+
+.reviews-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	padding-left: 80px;
+}
+
+.reviews-text {
+	margin-bottom: 25px;
+	font-size: 36px;
+	line-height: 1.2;
+	font-family: 'Cardo' sans-serif;
+	font-style: italic;
+	color: #fff;
+}
+
+.reviews-autor {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.reviews-slider {
+	height: 500px;
+	overflow: hidden;
+}
+.reviews-slider.slick-initialized {
+	height: auto;
+}
+
+.slick-dots li {
+	margin: 0 5px;
+	
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+	padding: 0 0 10px;
+	list-style: none;
+	width: 50%;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.slick-dots button {
+	width: 15px;
+	height: 15px;
+	pad: 0;
+	border: 0;
+	border-radius: 50%;
+	background: #fff;
+	
+	font-size: 0;
+	color: transparent;
+
+	opacity: 0.5;
+	cursor: pointer;
+}
+.slick-dots .slick-active button {
+	opacity: 1;
+}
+.slick-dots:focus button {
+	outline: 0;
+}
+
+/*=========DOWNLOAD=========*/
+
+.download {
+	margin: 90px 0;
+	text-align: center;
+}
+
+.download-title {
+	margin-bottom: 10px;
+	font-size: 28px;
+	font-weight: 300;
+	color: #2d3033;
+}
+
+.download-text {
+	margin-bottom: 30px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #2d3033;
+	text-transform: uppercase;
+}
+
+/*=========FOOTER=========*/
+
+.footer {
+	background-color: #3e3e64;
+}
+
+.footer-inner {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 70px 0;
+}
+
+.footer-block {
+	padding: 0 15px;
+	width: 33.33333%;
+	text-align: center;
+}
+
+.footer-title {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.footer-adress {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-text {
+	font-size: 14px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*=========COOPYRIGHT=========*/
+
+.coopyright {
+	padding: 20px 0;
+	background-color: #313454;
+}
+
+.coopyright-text {
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.5;
+	color: #808080;
+}
+
+.coopyright-text span {
+	color: #fff;
+}
+
+/*=========BURGER=========*/
+
+.burger {
+	display: none;
+	padding: 9px 2px;
+
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.burger-item {
+	display: block;
+	width: 30px;
+	height: 3px;
+
+	background-color: #fff;
+
+	font-size: 0;
+	color: transparent;
+
+	position: relative;
+}
+
+.burger-item::before,
+.burger-item::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+
+	background-color: #fff;
+
+	position: absolute;
+	left: 0px;
+	z-index: 1;
+}
+.burger-item::before {
+	top: -8px;
+}
+.burger-item::after {
+	bottom: -8px;
+}
+
+/*=========MEDIA=========*/
+
+@media (max-width: 991px) {
+
+	/* NAV */
+	.nav {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+
+		background-color: #31344e;
+		text-align: right;
+
+		position: absolute;
+		top: 100%;
+		right: 0;
+	}
+	.nav.show {
+		display: flex;
+	}
+
+	.nav-link {
+		padding: 9px 15px;
+	}
+
+	/* BURGER */
+	.burger {
+		display: block;
+	}
+
+	/* INTRO */
+	.intro-title {
+		font-size: 40px;
+	}
+
+	/* FEATURES */
+	.features-item {
+		width: 50%;
+	}
+
+	/* WORKS */
+	.works-item {
+		width: 50%;
+	}
+
+	/* TEAM */
+	.team-item {
+		width: 50%;
+		text-align: center;
+	}
+
+	.team-img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* SOCIAL */
+	.social {
+		justify-content: center;
+	}
+
+	/* REVIEWS */
+	.reviews-photo {
+		margin: 15px 0 40px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.reviews-content {
+		width: 100%;
+		padding-left: 0;
+		padding-bottom: 40px;
+	}	
+}
+
+@media (max-width: 768px) {
+	
+	/* INTRO */
+	.intro {
+		height: auto;
+		padding-top: 130px;
+		padding-bottom: 30px;
+	}
+
+	.intro-title {
+		font-size: 30px;
+	}
+
+	.intro-subtitle {
+		margin-bottom: 30px;
+		font-size: 16px;
+	}
+
+	/* FEATURES */
+	.features {
+		margin: 40px 0;
+	}
+
+	.features-item {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	/* WORKS */
+	.works-item {
+		width: 100%;
+		height: 300px;
+	}
+
+	/* TEAM */
+	.team {
+		margin: 60px 0 30px 0;
+	}
+
+	.team-item {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* REVIEWS */
+	.reviews-text {
+		font-size: 25px;
+	}
+
+	/* BTN */
+	.btn--long {
+		min-width: 260px;	
+	}
+
+	/* DOWNLOAD */
+	.download {
+		margin: 50px 0;
+	}
+
+	.download-title {
+		font-size: 24px;
+	}
+
+	/* FOOTER */
+	.footer-block {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+	.footer-block:last-child {
+		margin-bottom: 0px;
+	}
+
+	.footer-inner {
+		padding: 30 px 0;
+	}
+}
+
+@media (max-width: 414px) {
+	/* REVIEWS */
+	.reviews-img {
+		right: -100px;
+	}
+}
